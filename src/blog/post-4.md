@@ -1,12 +1,11 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: My Fourth Blog Post
 author: Astro Learner
 description: 'This post will show up on its own!'
 image:
   url: 'https://docs.astro.build/default-og-image.png'
   alt: 'The word astro against an illustration of planets and stars.'
-pubDate: 27-01-2024
+pubDate: 2024-01-28
 tags: ['astro', 'successes']
 ---
 

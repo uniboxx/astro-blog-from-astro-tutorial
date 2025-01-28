@@ -10,9 +10,8 @@ const identity = {
 };
 const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs'];
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
-const skillColor = 'navy';
 ---
 
 <BaseLayout pageTitle="About Page">
@@ -59,13 +58,12 @@ const skillColor = 'navy';
   }
 </BaseLayout>
 
-<style define:vars={{ skillColor }}>
+<style>
   h1 {
     color: purple;
     font-size: 4rem;
   }
   .skill {
-    color: var(--skillColor);
     font-weight: bold;
   }
 </style>

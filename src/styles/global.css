@@ -1,6 +1,21 @@
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
+  &.dark {
+    background-color: #0d0950;
+    color: #fff;
+  }
+}
+
+.skill {
+  color: navy;
+}
+
+.dark {
+  a,
+  .skill {
+    color: #fff;
+  }
 }
 
 body {

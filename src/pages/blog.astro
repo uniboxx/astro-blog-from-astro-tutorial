@@ -1,10 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import BlogPost from '../components/BlogPost.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const allPosts = Object.values(
-  import.meta.glob('./posts/*.md', { eager: true })
-);
+const allPosts = await getCollection('blog');
+allPosts.length > 1 &&
+  allPosts.sort(
+    (a: any, b: any) =>
+      parseInt(b?.id.match(/\d+$/)[0]) - parseInt(a?.id.match(/\d+$/)[0])
+  );
 ---
 
 <BaseLayout pageTitle="My Astro Learning Blog">
@@ -12,7 +16,7 @@ const allPosts = Object.values(
   <ul>
     {
       allPosts.map((post: any) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
+        <BlogPost url={`/astro_01/posts/${post.id}/`} title={post.data.title} />
       ))
     }
   </ul>
