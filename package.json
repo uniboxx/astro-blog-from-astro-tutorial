@@ -1,5 +1,5 @@
 {
-  "name": "astro_01",
+  "name": "astro-blog-from-astro-tutorial",
   "type": "module",
   "version": "0.0.1",
   "packageManager": "bun@1.2.0",
