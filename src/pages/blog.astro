@@ -9,6 +9,7 @@ allPosts.length > 1 &&
     (a: any, b: any) =>
       parseInt(b?.id.match(/\d+$/)[0]) - parseInt(a?.id.match(/\d+$/)[0])
   );
+const pathname = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout pageTitle="My Astro Learning Blog">
@@ -16,7 +17,10 @@ allPosts.length > 1 &&
   <ul>
     {
       allPosts.map((post: any) => (
-        <BlogPost url={`/astro_01/posts/${post.id}/`} title={post.data.title} />
+        <BlogPost
+          url={`/${pathname}/posts/${post.id}/`}
+          title={post.data.title}
+        />
       ))
     }
   </ul>

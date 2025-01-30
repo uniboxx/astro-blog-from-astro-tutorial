@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
+const pathname = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
@@ -13,7 +14,7 @@ const { frontmatter } = Astro.props;
     {
       frontmatter.tags.map((tag: string) => (
         <p class="tag">
-          <a href={`/astro_01/tags/${tag}`}>{tag}</a>
+          <a href={`/${pathname}/tags/${tag}`}>{tag}</a>
         </p>
       ))
     }
