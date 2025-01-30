@@ -12,7 +12,7 @@ html {
 }
 
 .dark {
-  a,
+  li > a,
   .skill {
     color: #fff;
   }
